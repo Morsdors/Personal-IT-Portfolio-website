@@ -443,6 +443,14 @@ header {
   }
 }
 
+/*banner site*/
+
+.banner-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
 /*----- Skills
 --------------------------------------------------------------*/
 .skill-chart li {
