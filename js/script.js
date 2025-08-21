@@ -33,27 +33,29 @@
 
 
   // Portfolio Slider
-  var swiper = new Swiper(".portfolio-Swiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      300: {
-        slidesPerView: 2,
+  if (document.querySelector(".portfolio-Swiper")) {
+    var swiper = new Swiper(".portfolio-Swiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+      breakpoints: {
+        300: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
       },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-  });
+    });
+  }
 
   // Animate Texts
   var initTextFx = function () {

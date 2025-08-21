@@ -451,6 +451,20 @@ header {
 }
 
 
+.portfolio-Swiper .swiper-wrapper {
+  display: block !important;  /* override Swiper's flex */
+  transform: none !important; /* remove sliding transform */
+}
+
+.portfolio-Swiper .swiper-slide {
+  width: 100% !important;     /* full width for each item */
+  margin-bottom: 2rem;        /* space between items */
+}
+
+.swiper-pagination {
+  display: none !important;   /* hide pagination on mobile */
+}
+
 /*----- Skills
 --------------------------------------------------------------*/
 .skill-chart li {

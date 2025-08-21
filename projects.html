@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dorota Solarska - Projects</title>
+
+  <!-- Bootstrap & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .projects-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .portfolio-item {
+      position: relative;
+    }
+
+    .video-wrapper {
+      position: relative;
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .video-wrapper img.preview,
+    .video-wrapper video.hover-video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hover-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .video-wrapper:hover .hover-video {
+      opacity: 1;
+    }
+
+    .video-wrapper:hover .preview {
+      opacity: 0;
+    }
+
+    .project-title {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="projects-header">
+    <h2 class="m-0">My Projects</h2>
+    <a href="index.html" class="btn btn-dark text-uppercase py-4 px-5" >← Back to Home</a>
+  </header>
+
+  <!-- Projects Grid -->
+  <main>
+    <div class=" swiper portfolio-Swiper portfolio-content py-4 swiper-wrapper projects-grid">
+      <!-- START Portfolio Items (extracted from your swiper) -->
+      <!-- Example Project Item -->
+      <div class="swiper-slide">
+        <div class="image-holder">
+          <a href="https://genalphatranslate.netlify.app/" title="portfolio details" class="video-link">
+            <div class="video-wrapper">
+              <!-- default image -->
+              <img src="images/me-AlphaTranslate-screenshot.png"
+                   alt="portfolio" class="img-fluid preview">
+        
+              <!-- hover video -->
+              <video class="hover-video" muted loop preload="metadata">
+                <source src="translation-vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </a>
+        </div>
+        <div class="caption d-flex justify-content-between align-items-center">
+          <div class="title"><a href= "https://genalphatranslate.netlify.app/">AI-based translator from English to GenAlpha slang</a></div>
+          <a href="#" class="image-format bg-orange"></a>
+        </div>
+        <!-- end of hover vid -->   
+      </div>
+
+      <!-- Repeat for all your projects from the swiper -->
+      <!-- Example -->
+      <div class="swiper-slide">
+        <div class="image-holder">
+          <a href="https://dorota-solarska-green-ai.netlify.app" title="portfolio details" class="video-link">
+            <div class="video-wrapper">
+              <img src="images/me-GreenAI-screenshot2.png"
+                alt="portfolio" class="img-fluid preview">
+              <!-- hover video -->
+              <video class="hover-video" muted loop preload="metadata">
+                <source src="GreenAI-vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </a>
+        </div>
+        <div class="caption d-flex justify-content-between align-items-center">
+          <div class="title"><a href="https://dorota-solarska-green-ai.netlify.app">Green-AI practices reaserch</a></div>
+          <a href="#" class="image-format bg-orange"></a>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="image-holder">
+          <a href="https://sunglow.netlify.app" title="portfolio details"><img src="images/me-Sunglow-screenshot.png"
+              alt="portfolio" class="img-fluid"></a>
+        </div>
+        <div class="caption d-flex justify-content-between align-items-center">
+          <div class="title"><a href="https://sunglow.netlify.app">Website for an online store</a></div>
+          <a href="#" class="image-format bg-blue"></a>
+        </div>
+      </div>
+      
+      <!-- Continue for all your items -->
+      <!-- END Portfolio Items -->
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="projects.js"></script>
+</body>
+</html>
