@@ -454,7 +454,7 @@ header {
 
 /* Reduce spacing between banner image and content */
 .banner-content {
-  margin-top: -2rem ;
+  margin-top: 0 ;
   padding-top: 0 ;
 }
 
@@ -464,7 +464,7 @@ header {
 
 .scroll-down {
   margin-top: 1rem;
-  text-align: center;
+  /* text-align: center; */
   animation: bounce 1.5s infinite;
   cursor: pointer;
 }

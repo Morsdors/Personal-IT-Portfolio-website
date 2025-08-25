@@ -60,16 +60,29 @@
     });
   }
 
-  document.addEventListener("scroll", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const icon = document.querySelector(".scroll-down");
     if (!icon) return;
-    if (window.scrollY > 50) {
-      icon.style.opacity = "0";
-      icon.style.transition = "opacity 0.5s";
-    } else {
-      icon.style.opacity = "1";
-    }
+  
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        icon.style.opacity = "0";
+      } else {
+        icon.style.opacity = "1";
+      }
+    });
+
+    icon.addEventListener("click", () => {
+      window.scrollBy({
+        top: 300,   // pixels to scroll down
+        left: 0,
+        behavior: "smooth"
+      });
+    });
+
   });
+
+  
   
 
   // var swiper = new Swiper(".portfolio-Swiper", {
