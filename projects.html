@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +14,13 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
     .projects-header {
       display: flex;
       justify-content: space-between;
@@ -29,9 +35,11 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .portfolio-item {
@@ -62,19 +70,42 @@
       transition: opacity 0.3s ease;
     }
 
-    .video-wrapper:hover .hover-video {
-      opacity: 1;
+    /* Hover effect on desktop only */
+    @media (hover: hover) and (pointer: fine) {
+      .video-wrapper:hover .hover-video {
+        opacity: 1;
+      }
+      /* Only fade image if there is a hover-video */
+      .video-wrapper:has(.hover-video):hover .preview {
+        opacity: 0;
+      }
+
     }
 
-    .video-wrapper:hover .preview {
-      opacity: 0;
-    }
-
-    .project-title {
+    .caption {
+      margin-top: 0.5rem;
       text-align: center;
-      margin-top: 1rem;
-      font-size: 1rem;
-      font-weight: 600;
+    }
+
+    .caption .title a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 576px) {
+      .projects-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .projects-header h2 {
+        margin-bottom: 1rem;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -83,80 +114,101 @@
   <!-- Header -->
   <header class="projects-header">
     <h2 class="m-0">My Projects</h2>
-    <a href="index.html" class="btn btn-dark text-uppercase py-4 px-5" >← Back to Home</a>
+    <a href="index.html" class="btn btn-dark text-uppercase py-2 px-4">← Back to Home</a>
   </header>
 
   <!-- Projects Grid -->
   <main>
-    <div class=" swiper portfolio-Swiper portfolio-content py-4 swiper-wrapper projects-grid">
-      <!-- START Portfolio Items (extracted from your swiper) -->
-      <!-- Example Project Item -->
-      <div class="swiper-slide">
-        <div class="image-holder">
-          <a href="https://genalphatranslate.netlify.app/" title="portfolio details" class="video-link">
-            <div class="video-wrapper">
-              <!-- default image -->
-              <img src="images/me-AlphaTranslate-screenshot.png"
-                   alt="portfolio" class="img-fluid preview">
-        
-              <!-- hover video -->
-              <video class="hover-video" muted loop preload="metadata">
-                <source src="translation-vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </a>
-        </div>
-        <div class="caption d-flex justify-content-between align-items-center">
-          <div class="title"><a href= "https://genalphatranslate.netlify.app/">AI-based translator from English to GenAlpha slang</a></div>
-          <a href="#" class="image-format bg-orange"></a>
-        </div>
-        <!-- end of hover vid -->   
-      </div>
-
-      <!-- Repeat for all your projects from the swiper -->
-      <!-- Example -->
-      <div class="swiper-slide">
-        <div class="image-holder">
-          <a href="https://dorota-solarska-green-ai.netlify.app" title="portfolio details" class="video-link">
-            <div class="video-wrapper">
-              <img src="images/me-GreenAI-screenshot2.png"
-                alt="portfolio" class="img-fluid preview">
-              <!-- hover video -->
-              <video class="hover-video" muted loop preload="metadata">
-                <source src="GreenAI-vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </a>
-        </div>
-        <div class="caption d-flex justify-content-between align-items-center">
-          <div class="title"><a href="https://dorota-solarska-green-ai.netlify.app">Green-AI practices reaserch</a></div>
-          <a href="#" class="image-format bg-orange"></a>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="portfolio-item">
+        <a href="https://genalphatranslate.netlify.app/" title="AI-based translator">
+          <div class="video-wrapper">
+            <img src="images/me-AlphaTranslate-screenshot.png" alt="portfolio" class="preview">
+            <video class="hover-video" muted loop preload="metadata">
+              <source src="translation-vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </a>
+        <div class="caption">
+          <div class="title">
+            <a href="https://genalphatranslate.netlify.app/">AI-based translator from English to GenAlpha slang</a>
+          </div>
         </div>
       </div>
 
-      <div class="swiper-slide">
-        <div class="image-holder">
-          <a href="https://sunglow.netlify.app" title="portfolio details"><img src="images/me-Sunglow-screenshot.png"
-              alt="portfolio" class="img-fluid"></a>
-        </div>
-        <div class="caption d-flex justify-content-between align-items-center">
-          <div class="title"><a href="https://sunglow.netlify.app">Website for an online store</a></div>
-          <a href="#" class="image-format bg-blue"></a>
+      <!-- Project 2 -->
+      <div class="portfolio-item">
+        <a href="https://dorota-solarska-green-ai.netlify.app" title="Green-AI practices research">
+          <div class="video-wrapper">
+            <img src="images/me-GreenAI-screenshot2.png" alt="portfolio" class="preview">
+            <video class="hover-video" muted loop preload="metadata">
+              <source src="GreenAI-vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </a>
+        <div class="caption">
+          <div class="title">
+            <a href="https://dorota-solarska-green-ai.netlify.app">Green-AI practices research</a>
+          </div>
         </div>
       </div>
-      
-      <!-- Continue for all your items -->
-      <!-- END Portfolio Items -->
+
+      <!-- Project 3 -->
+      <div class="portfolio-item">
+        <a href="https://sunglow.netlify.app" title="Website for an online store">
+          <div class="video-wrapper">
+            <img src="images/me-Sunglow-screenshot.png" alt="portfolio" class="preview">
+            
+          </div>
+        </a>
+        <div class="caption">
+          <div class="title">
+            <a href="https://sunglow.netlify.app">Website for an online store</a>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
   <!-- Scripts -->
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-  <script src="projects.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Hover Video Play/Pause
+      const wrappers = document.querySelectorAll(".video-wrapper");
+
+      wrappers.forEach(wrapper => {
+        const video = wrapper.querySelector(".hover-video");
+        if (!video) return;
+
+        wrapper.addEventListener("mouseenter", () => {
+          video.currentTime = 0;
+          video.play().catch(err => console.log("Autoplay blocked:", err));
+        });
+
+        wrapper.addEventListener("mouseleave", () => {
+          video.pause();
+        });
+      });
+
+      // Chocolat Lightbox (if included)
+      if (typeof Chocolat !== "undefined") {
+        Chocolat(document.querySelectorAll(".image-link"), {
+          imageSize: 'contain',
+          loop: true,
+        });
+      }
+
+      // AOS Animations (if included)
+      if (typeof AOS !== "undefined") {
+        AOS.init({
+          duration: 1200,
+        });
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
