@@ -429,7 +429,7 @@ header {
 }
 
 @media (max-width: 991px) {
-  /* mobile menu */
+  /* mobile menu 991px  */
   header {
     transform: translate3d(-100%, 0, 0);
     transition: transform 0.3s ease-out;
@@ -445,25 +445,25 @@ header {
 
 /*banner site*/
 
-.banner-content {
+/* .banner-content {
   margin-top: 0 !important;
   padding-top: 0 !important;
-}
+} */
 
-
+/* 
 .portfolio-Swiper .swiper-wrapper {
-  display: block !important;  /* override Swiper's flex */
-  transform: none !important; /* remove sliding transform */
-}
+  display: block ;  /* override Swiper's flex 
+  transform: none ; /* remove sliding transform 
+} */
 
-.portfolio-Swiper .swiper-slide {
-  width: 100% !important;     /* full width for each item */
-  margin-bottom: 2rem;        /* space between items */
-}
+/* .portfolio-Swiper .swiper-slide {
+  width: 100% ;     /* full width for each item 
+  margin-bottom: 2rem;        /* space between items 
+} */
 
-.swiper-pagination {
-  display: none !important;   /* hide pagination on mobile */
-}
+/* .swiper-pagination {
+  display: none ;   /* hide pagination on mobile 
+} */
 
 /*----- Skills
 --------------------------------------------------------------*/

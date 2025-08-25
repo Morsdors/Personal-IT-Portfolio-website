@@ -42,20 +42,52 @@
         clickable: true,
       },
       breakpoints: {
-        300: {
+        0: {
+          slidesPerView: 1,
+        },
+        490: {
           slidesPerView: 2,
         },
         768: {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-        1200: {
+        1100: {
           slidesPerView: 3,
           spaceBetween: 30,
         },
       },
     });
   }
+
+
+  // var swiper = new Swiper(".portfolio-Swiper", {
+  //   slidesPerView: 4,
+  //   spaceBetween: 30,
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+  //   breakpoints: {
+  //     0: {
+  //       direction: 'vertical', // ✅ vertical on small screens
+  //       slidesPerView: 1,
+  //       spaceBetween: 20,
+  //     },
+  //     768: {
+  //       direction: 'horizontal', // ✅ back to horizontal on tablets
+  //       slidesPerView: 2,
+  //       spaceBetween: 20,
+  //     },
+  //     1200: {
+  //       direction: 'horizontal', // ✅ horizontal on desktop
+  //       slidesPerView: 3,
+  //       spaceBetween: 30,
+  //     }
+  //   },
+  // });
+  
+  
 
   // Animate Texts
   var initTextFx = function () {
