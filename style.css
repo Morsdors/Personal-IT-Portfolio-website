@@ -445,6 +445,24 @@ header {
 
 /*banner site*/
 
+.banner-image img {
+  display: block;   /* removes inline spacing */
+  margin-bottom: 0; /* ensures no default margin */
+}
+
+.scroll-down {
+  margin-top: 1rem;
+  text-align: center;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+
 /* .banner-content {
   margin-top: 0 !important;
   padding-top: 0 !important;

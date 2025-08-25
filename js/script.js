@@ -60,6 +60,17 @@
     });
   }
 
+  document.addEventListener("scroll", () => {
+    const icon = document.querySelector(".scroll-down");
+    if (!icon) return;
+    if (window.scrollY > 50) {
+      icon.style.opacity = "0";
+      icon.style.transition = "opacity 0.5s";
+    } else {
+      icon.style.opacity = "1";
+    }
+  });
+  
 
   // var swiper = new Swiper(".portfolio-Swiper", {
   //   slidesPerView: 4,
