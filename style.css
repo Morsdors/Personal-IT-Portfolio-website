@@ -446,8 +446,20 @@ header {
 /*banner site*/
 
 .banner-image img {
-  display: block;   /* removes inline spacing */
-  margin-bottom: 0; /* ensures no default margin */
+  display: block;   /* removes inline baseline gap */
+  margin-bottom: 0; /* removes default bottom margin */
+  padding-bottom: 0; /* just in case */
+}
+
+
+/* Reduce spacing between banner image and content */
+.banner-content {
+  margin-top: -2rem ;
+  padding-top: 0 ;
+}
+
+.banner-image {
+  margin-bottom: 0rem !important; /* tiny space under image */
 }
 
 .scroll-down {
